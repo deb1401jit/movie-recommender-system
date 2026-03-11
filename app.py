@@ -40,7 +40,7 @@ prioritize_franchise = st.sidebar.checkbox("Prioritize franchise sequels", value
 language_pref = st.sidebar.selectbox(
     "Language filter",
     ["Same language only", "Prefer same language", "Any language"],
-    index=0,
+    index=1,
 )
 region_pref = st.sidebar.selectbox(
     "Region preference",
