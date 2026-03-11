@@ -186,7 +186,7 @@ for rec in recs:
         else:
             st.write("No poster")
     with cols[1]:
-        st.markdown(f"**{rec.get('title', 'Untitled')}**")
+        st.markdown(f"<div style=\"font-size:1.2em;font-weight:600;\">{rec.get('title', 'Untitled')}</div>", unsafe_allow_html=True)
         st.write(f"Release date: {rec.get('release_date', 'Unknown')}")
         st.write(f"TMDB rating: {rec.get('vote_average', 'N/A')}")
         overview = rec.get("overview") or "No overview available."
