@@ -36,7 +36,7 @@ st.write("Search a movie title and get personalized recommendations.")
 
 pages = 2
 result_count = st.sidebar.slider("Results to show", min_value=5, max_value=20, value=10)
-prioritize_franchise = st.sidebar.checkbox("Prioritize franchise sequels", value=True)
+prioritize_franchise = True
 language_pref = st.sidebar.selectbox(
     "Language filter",
     ["Same language only", "Prefer same language", "Any language"],
