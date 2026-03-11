@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import html
 import os
 from dataclasses import dataclass
 
@@ -189,6 +188,3 @@ for rec in recs:
         st.markdown(f"<div style=\"font-size:1.2em;font-weight:600;\">{rec.get('title', 'Untitled')}</div>", unsafe_allow_html=True)
         st.write(f"Release date: {rec.get('release_date', 'Unknown')}")
         st.write(f"TMDB rating: {rec.get('vote_average', 'N/A')}")
-        overview = rec.get("overview") or "No overview available."
-        safe_overview = html.escape(overview).replace("\n", "<br>")
-        st.markdown(f"<div>{safe_overview}</div>", unsafe_allow_html=True)
