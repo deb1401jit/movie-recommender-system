@@ -8,7 +8,6 @@ Live movie recommender built with Python and the TMDB API. Search a movie title 
 - TF-IDF similarity using genres, keywords, cast, crew, and overview
 - Franchise-first ranking to surface sequels early
 - Streamlit web UI for interactive recommendations
-- Heroku-ready `Procfile`
 
 **Quick Start**
 1. Create a virtual environment and install dependencies.
@@ -29,10 +28,18 @@ streamlit run app.py
 **Environment**
 - Create a `.env` file if you prefer, and add `TMDB_API_KEY=your_key_here`.
 
-**Deployment (Heroku)**
-1. Add a TMDB API key in Heroku config vars as `TMDB_API_KEY`.
-2. Start the app using the `Procfile` (live TMDB mode).
-3. The app runs live from TMDB, no dataset build needed.
+**Deployment (Streamlit Community Cloud)**
+1. Create a new app from this GitHub repo.
+2. Set the main file to `app.py`.
+3. Add a secret in TOML format:
+   ```
+   TMDB_API_KEY = "your_key_here"
+   ```
+4. Deploy.
 
 **Project Layout**
 - `app.py` Streamlit application
+- `config.py` App constants
+- `tmdb_client.py` TMDB API helpers
+- `recommender.py` Candidate discovery + similarity ranking
+- `utils.py` Utility helpers
