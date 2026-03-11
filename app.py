@@ -34,18 +34,7 @@ st.set_page_config(page_title="Movie Recommender", layout="wide")
 st.title("Movie Recommender System")
 st.write("Search a movie title and get personalized recommendations.")
 
-speed_option = st.sidebar.selectbox(
-    "Scan depth (more movies = better recommendations, slower)",
-    ["Fast (20 movies)", "Balanced (40 movies)", "Thorough (60 movies)", "Deep (100 movies)"],
-    index=1,
-)
-pages_by_option = {
-    "Fast (20 movies)": 1,
-    "Balanced (40 movies)": 2,
-    "Thorough (60 movies)": 3,
-    "Deep (100 movies)": 5,
-}
-pages = pages_by_option[speed_option]
+pages = 2
 result_count = st.sidebar.slider("Results to show", min_value=5, max_value=20, value=10)
 prioritize_franchise = st.sidebar.checkbox("Prioritize franchise sequels", value=True)
 language_pref = st.sidebar.selectbox(
