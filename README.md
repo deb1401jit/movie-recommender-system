@@ -10,7 +10,7 @@ Live movie recommender built with Python and the TMDB API. Search a movie title 
 - Streamlit web UI for interactive recommendations
 - Heroku-ready `Procfile`
 
-**Quick Start (Live TMDB)**
+**Quick Start**
 1. Create a virtual environment and install dependencies.
 2. Set your TMDB API key in the environment.
 3. Run the Streamlit app. It will build recommendations live from TMDB data.
