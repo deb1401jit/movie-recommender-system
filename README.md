@@ -1,6 +1,6 @@
 # Movie Recommendation System
 
-Live movie recommender built with Python and the TMDB API. Search a movie title and get recommendations ranked by our own similarity model.
+Live movie recommender built with Python and the TMDB API. Search a movie title and get recommendations.
 
 **Features**
 - Live TMDB search for movie titles
