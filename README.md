@@ -29,19 +29,10 @@ streamlit run app.py
 **Environment**
 - Create a `.env` file if you prefer, and add `TMDB_API_KEY=your_key_here`.
 
-**Optional: Build a Local Dataset**
-If you want a local CSV for analysis, you can build one with the script below.
-
-```bash
-python scripts/build_dataset.py --pages 5
-```
-
 **Deployment (Heroku)**
 1. Add a TMDB API key in Heroku config vars as `TMDB_API_KEY`.
 2. Start the app using the `Procfile` (live TMDB mode).
-3. Optionally prebuild a dataset in a one-off dyno and switch to `Local CSV`.
+3. The app runs live from TMDB, no dataset build needed.
 
 **Project Layout**
 - `app.py` Streamlit application
-- `scripts/build_dataset.py` TMDB data pipeline
-- `data/` CSV output location
